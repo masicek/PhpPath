@@ -17,6 +17,11 @@ namespace PhpDirectory;
 class Directory
 {
 
+	/**
+	 * Version of PhpDirectory
+	 */
+	const VERSION = '0.1.0';
+
 
 	/**
 	 * Check if the directory exists

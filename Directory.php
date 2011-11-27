@@ -60,4 +60,17 @@ class Directory
 	}
 
 
+	/**
+	 * Make path from list of arguments and check if the directory exists
+	 *
+	 * @return string
+	 */
+	static public function makeAndCheck()
+	{
+		$path = call_user_func_array('self::make', func_get_args());
+		self::check($path);
+		return $path;
+	}
+
+
 }

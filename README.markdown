@@ -19,7 +19,7 @@ P::cd([PATH]);
 P::cf([PATH]);
 ```
 
-Check if the directory of file exists. If not, then terminated by exception.
+Check if the directory of file exists. If not, then terminated by exception ```\PhpPath\NotExistsPathException```.
 
 
 Make Path

@@ -13,7 +13,8 @@
 // code
 $PathContent = exec('php -w ../Path.php');
 $PContent = exec('php -w ../P.php');
-$content = $PathContent . ' ' . $PContent;
+$ExceptionsContent = exec('php -w ../Exceptions.php');
+$content = $PathContent . ' ' . $PContent . ' ' . $ExceptionsContent;
 $content = preg_replace('/require_once[^;]+;/', '', $content);
 
 // comment

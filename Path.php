@@ -9,6 +9,8 @@
 
 namespace PhpPath;
 
+require_once __DIR__ . '/Exceptions.php';
+
 /**
  * Collection of static functions for better work with path to directory/file
  *
@@ -20,7 +22,7 @@ class Path
 	/**
 	 * Version of PhpPath
 	 */
-	const VERSION = '0.2.0';
+	const VERSION = '0.2.1';
 
 
 	/**
@@ -37,7 +39,7 @@ class Path
 
 		if (!is_dir($pathFiltered))
 		{
-			throw new \Exception('Directory "' . $path . '" not exists.');
+			throw new NotExistsPathException('Directory "' . $path . '" not exists.');
 		}
 
 		return $path;
@@ -58,7 +60,7 @@ class Path
 
 		if (!is_file($pathFiltered))
 		{
-			throw new \Exception('File "' . $path . '" not exists.');
+			throw new NotExistsPathException('File "' . $path . '" not exists.');
 		}
 
 		return $path;
